@@ -21,17 +21,17 @@ output = {}
 table = 'employee'
 
 
-@app.route("/", methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def home():
     return render_template('AddEmp.html')
 
 
-@app.route("/about", methods=['GET', 'POST'])
+@app.route('/about', methods=['GET', 'POST'])
 def about():
     return redirect("www.intellipaat.com", code=302)
 
 
-@app.route("/addemp", methods=['POST'])
+@app.route('/addemp', methods=['POST'])
 def AddEmp():
     emp_id = request.form['emp_id']
     first_name = request.form['first_name']
@@ -80,7 +80,7 @@ def AddEmp():
     print("all modification done...")
     return render_template('AddEmpOutput.html', name=emp_name)
 
-@app.route("/getemp", methods=['GET', 'POST'])
+@app.route('/getemp', methods=['GET', 'POST'])
 def getemp():
     return render_template('GetEmp.html')
 
