@@ -35,7 +35,7 @@ def about():
 def AddEmp():
     if request.method == 'GET':
         return redirect(url_for('home'))
-    else
+    else:
         emp_id = request.form['emp_id']
         first_name = request.form['first_name']
         last_name = request.form['last_name']
