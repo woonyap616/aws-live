@@ -21,14 +21,14 @@ output = {}
 table = 'employee'
 
 
-@app.route("/", methods=['GET', 'POST'])
+@app.route("/", methods=['GET'])
 def home():
     return render_template('AddEmp.html')
 
 
 @app.route("/about", methods=['GET', 'POST'])
 def about():
-    return redirect('www.intellipaat.com', code=302)
+    return redirect("www.intellipaat.com", code=302)
 
 
 @app.route("/addemp", methods=['POST'])
