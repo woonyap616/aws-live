@@ -8,7 +8,7 @@
 <center>
 	<font color="black" size="6" style="font-family: avenir">
 
-		<h1 size="4" style="color: whitesmoke">Employee Database</h1>
+		<h1 size="4">Employee Database</h1>
 
 		<body style="background-image: url('ezgif.com-gif-maker.jpg');">
 			<style>
@@ -42,11 +42,11 @@
 				}
 				</style>
 			<div>
-				<button type="submit" href="{{ url_for('getemp') }}" method = "get"style="background: black; height: 45px; width: 200px; color:white; font:oblique;">GET EMPLOYEE INFORMATION</button><br><br>
 				<form action="/addemp" autocomplete="on" method = "post" enctype="multipart/form-data">
-
-					
-	
+					<button type="submit" action="/getemp" method = "get"style="background: black; height: 45px; width: 200px; color:white; font:oblique;">GET EMPLOYEE INFORMATION</button><br><br>
+				</form>
+				
+				<form action="/addemp" autocomplete="on" method = "post" enctype="multipart/form-data">
 					  Employee ID:<br> <input style="height:25px;font-size:14pt; color:black;" type="number" name="emp_id" autofocus size="40"><br><br>
 	
 					  First Name:<br> <input style="height:25px;font-size:14pt;color:black;" type="text" name="first_name" ><br><br>

@@ -28,7 +28,8 @@ def home():
 
 @app.route('/about', methods=['GET', 'POST'])
 def about():
-    return redirect("www.intellipaat.com", code=302)
+    if request.method == 'GET':
+        return redirect("www.intellipaat.com", code=302)
 
 
 @app.route('/addemp', methods=['GET', 'POST'])
@@ -85,6 +86,7 @@ def AddEmp():
 
 @app.route('/getemp', methods=['GET'])
 def getemp():
+    if request.method == 'GET':
         return render_template('GetEmp.html')
 
 if __name__ == '__main__':
