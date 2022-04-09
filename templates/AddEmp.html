@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Add Employee Information</title>
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ url_for('getemp') }}" />
 
 </head>
 <center>
@@ -44,7 +44,7 @@
 			<div>
 				<form action="/addemp" autocomplete="on" method = "POST" enctype="multipart/form-data">
 
-					<button type="submit" formaction="/GetEmp.html" style="background: black; height: 45px; width: 200px; color:white; font:oblique;">GET EMPLOYEE INFORMATION</button><br><br>
+					<button type="submit" formaction="/GetEmp" style="background: black; height: 45px; width: 200px; color:white; font:oblique;">GET EMPLOYEE INFORMATION</button><br><br>
 	
 					  Employee ID:<br> <input style="height:25px;font-size:14pt; color:black;" type="number" name="emp_id" autofocus size="40"><br><br>
 	
@@ -62,7 +62,7 @@
 	
 				</form>
 			</div>
-<a href="/about">About Us</a>
+<a href="{{ url_for('about') }}">About Us</a>
 		</body>
 
 	</font>
