@@ -28,7 +28,7 @@ def home():
 
 @app.route("/about", methods=['GET', 'POST'])
 def about():
-    return redirect('www.intellipaat.com')
+    return redirect('www.intellipaat.com', code=302)
 
 
 @app.route("/addemp", methods=['POST'])
