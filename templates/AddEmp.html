@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Add Employee Information</title>
 	<link rel="stylesheet" type="text/css" href="{{ url_for('getemp') }}" />
@@ -9,63 +10,76 @@
 	<font color="black" size="6" style="font-family: avenir">
 
 		<h1 size="4">Employee Database</h1>
+		<form action="/background" method="get" autocomplete="on" enctype="multipart/form-data">
 
-		<body style="background-image: url('ezgif.com-gif-maker.jpg');">
-			<style>
-				input[type=text], select {
-				  padding: 12px 20px;
-				  margin: 8px 0;
-				  display: inline-block;
-				  border: 1px solid #ccc;
-				  border-radius: 4px;
-				  box-sizing: border-box;
-				}
-				
-				input[type=submit] {
-				  background-color: #4CAF50;
-				  color: white;
-				  padding: 14px 20px;
-				  margin: 8px 0;
-				  border: none;
-				  border-radius: 4px;
-				  cursor: pointer;
-				}
-				
-				input[type=submit]:hover {
-				  background-color: #45a049;
-				}
-				
-				div {
-				  border-radius: 5px;
-				  background: rgba(242, 242, 242, .5);
-				  padding: 20px;
-				}
+			<body style="background-image: url('ezgif.com-gif-maker.jpg');">
+				<style>
+					input[type=text],
+					select {
+						padding: 12px 20px;
+						margin: 8px 0;
+						display: inline-block;
+						border: 1px solid #ccc;
+						border-radius: 4px;
+						box-sizing: border-box;
+					}
+
+					input[type=submit] {
+						background-color: #4CAF50;
+						color: white;
+						padding: 14px 20px;
+						margin: 8px 0;
+						border: none;
+						border-radius: 4px;
+						cursor: pointer;
+					}
+
+					input[type=submit]:hover {
+						background-color: #45a049;
+					}
+
+					div {
+						border-radius: 5px;
+						background: rgba(242, 242, 242, .5);
+						padding: 20px;
+					}
 				</style>
-			<div>
-				<form action="/getemp" method = "get" autocomplete="on" enctype="multipart/form-data">
-					<button type="submit" style="background: black; height: 45px; width: 200px; color:white; font:oblique;">GET EMPLOYEE INFORMATION</button><br><br>
-				</form>
-				
-				<form action="/addemp" autocomplete="on" method = "post" enctype="multipart/form-data">
-					  Employee ID:<br> <input style="height:25px;font-size:14pt; color:black;" type="number" name="emp_id" autofocus size="40"><br><br>
-	
-					  First Name:<br> <input style="height:25px;font-size:14pt;color:black;" type="text" name="first_name" ><br><br>
-	
-					  Last Name:<br> <input style="height:25px;font-size:14pt;color:black;" type="text" name="last_name"><br><br>
-	
-					  Primary Skills:<br> <input style="height:25px;font-size:14pt;color:black;" type="text" name="pri_skill"><br><br>
-	
-					  Location:<br> <input style="height:25px;font-size:14pt;color:black;" type="text" name="location"><br><br>
-	
-					  Image: <input type=file name="emp_image_file" style="height:25px;font-size:14pt;color:black;"> <br><br>
-	
-					  <input type="submit" value="Update Database">
-	
-				</form>
-			</div>
-<a href="{{ url_for('about') }}" mothod = "GET">About Us</a>
-		</body>
+				<div>
+					<form action="/getemp" method="get" autocomplete="on" enctype="multipart/form-data">
+						<button type="submit"
+							style="background: black; height: 45px; width: 200px; color:white; font:oblique;">GET
+							EMPLOYEE
+							INFORMATION</button><br><br>
+					</form>
+
+					<form action="/addemp" autocomplete="on" method="post" enctype="multipart/form-data">
+						Employee ID:<br> <input style="height:25px;font-size:14pt; color:black;" type="number"
+							name="emp_id" autofocus size="40"><br><br>
+
+						First Name:<br> <input style="height:25px;font-size:14pt;color:black;" type="text"
+							name="first_name"><br><br>
+
+						Last Name:<br> <input style="height:25px;font-size:14pt;color:black;" type="text"
+							name="last_name"><br><br>
+
+						Primary Skills:<br> <input style="height:25px;font-size:14pt;color:black;" type="text"
+							name="pri_skill"><br><br>
+
+						Location:<br> <input style="height:25px;font-size:14pt;color:black;" type="text"
+							name="location"><br><br>
+
+						Image: <input type=file name="emp_image_file" style="height:25px;font-size:14pt;color:black;">
+						<br><br>
+
+						<input type="submit" value="Update Database">
+
+					</form>
+				</div>
+				<a href="{{ url_for('about') }}" mothod="GET">About Us</a>
+			</body>
+		</form>
 
 	</font>
 </center>
+
 </html>
