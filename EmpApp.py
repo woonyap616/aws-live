@@ -25,18 +25,17 @@ table = 'employee'
 def home():
     return render_template('AddEmp.html')
 
-@app.route('/home2', methods=['GET'])
-def home2():
-    return render_template('AddEmp.html')
-
 
 @app.route('/about', methods=['GET', 'POST'])
 def about():
     return redirect("www.intellipaat.com", code=302)
 
 
-@app.route('/addemp', methods=['POST'])
+@app.route('/addemp', methods=['GET', 'POST'])
 def AddEmp():
+    if request.method == 'GET':
+        return redirect(url_for('home'))
+    
     emp_id = request.form['emp_id']
     first_name = request.form['first_name']
     last_name = request.form['last_name']
