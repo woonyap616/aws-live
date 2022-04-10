@@ -28,7 +28,7 @@ def home():
 @app.route('/background', methods=['GET', 'POST'])
 def background():
     if request.method == 'GET':
-        return render_template('ezgif.com-gif-maker.JPG', name=emp_name)
+        return render_template('ezgif.com-gif-maker.JPG')
     
 @app.route('/about', methods=['GET', 'POST'])
 def about():
